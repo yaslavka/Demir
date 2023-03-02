@@ -1,0 +1,147 @@
+/*@media only screen and (max-width: 476px) {*/
+/*    .advansages img{*/
+/*        width: 80vh;*/
+/*        padding-left: 55px;*/
+/*    }*/
+/*    .advansagess{*/
+/*        margin-inline: 35px;*/
+/*    }*/
+/*    div .advansagesss{*/
+/*        align-items: center;*/
+/*        justify-content: space-between;*/
+/*    }*/
+/*}*/
+/*576*/
+@media only screen and (max-width: 576px) {
+    .react-datepicker__input-container input{
+        width: 15vh;
+    }
+    .form__fieldset .date_fieldset .search_form_widget .c-datepicker-trigger-js{
+        text-align-last: center;
+    }
+    .search_form_scroll_target{
+        width:100%;
+    }
+    .found-variants{
+        display: block;
+        width: 40vh;
+    }
+    .items-container .list .item-inner{
+        display: block;
+    }
+    .rooms .table{
+        display: block;
+    }
+    thead{
+        display: block;
+    }
+    table{
+        display: block;
+    }
+    tbody{
+        display: block;
+
+    }
+    tr .room_12974 .selected{
+        display: block;
+    }
+    .advansages img{
+        width: 90vh;
+        padding-left: 55px;
+    }
+    .advansagess{
+        margin-inline: 35px;
+    }
+    div .advansagesss{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/*676*/
+@media only screen and (max-width: 670px) {
+    .advansages img{
+        width: 90vh;
+        padding-left: 55px;
+    }
+    .advansagess{
+        margin-inline: 35px;
+    }
+    div .advansagesss{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/*768*/
+@media only screen and (min-width: 768px) {
+    .advansages img{
+        width: 200vh;
+        padding-left: 100px;
+    }
+    .advansagess{
+        margin-inline: 110px;
+    }
+    div .advansagesss{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/*992*/
+@media only screen and (min-width: 992px) {
+    .advansages img{
+        width: 250vh;
+        padding-left: 130px;
+    }
+    .advansagess{
+        margin-inline: 140px;
+    }
+    div .advansagesss{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/*960*/
+/*@media (min-width: 960px) {*/
+/*    .advansages img{*/
+/*        max-width: 90vh;*/
+/*        min-height: 50px;*/
+/*        padding-left: 55px;*/
+/*    }*/
+/*    .advansagess{*/
+/*        margin-inline: 35px;*/
+/*    }*/
+/*    div .advansagesss{*/
+/*        align-items: center;*/
+/*        justify-content: space-between;*/
+/*    }*/
+/*}*/
+/*1200*/
+@media  only screen and (min-width: 1200px) {
+    .advansages img{
+        width: 600vh;
+        padding-left: 150px;
+    }
+    .advansagess{
+        margin-inline: 175px;
+    }
+    div .advansagesss{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/*1920*/
+@media only screen and (min-width: 1920px) {
+    .advansages img{
+        width: 500vh;
+        padding-left: 23vh;
+    }
+    div .advansagess{
+        margin-inline: 22vh;
+        font-size: 120px;
+        line-height: 200px;
+    }
+    div .advansagesss{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
