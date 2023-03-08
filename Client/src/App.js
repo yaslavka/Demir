@@ -4,7 +4,6 @@ import {useSelector, useDispatch} from 'react-redux'
 import * as actions from './actions/app.actions'
 import PublicRoutes from "./route/PublicRoutes";
 import PrivateRoutes from "./route/private.routes";
-import './App.css'
 
 
 function App({history}) {
@@ -16,9 +15,9 @@ function App({history}) {
         }
     }, [isAuthenticated, dispatch])
 
-    // if (!isAuthenticated){
-    //     return <PublicRoutes history={history} />
-    // }
+    if (!isAuthenticated){
+        return <PublicRoutes history={history} />
+    }
     return <PrivateRoutes history={history} />
 
 }

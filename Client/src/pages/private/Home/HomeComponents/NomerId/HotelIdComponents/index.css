@@ -1,0 +1,18 @@
+.nomerid-stranica-otzyv{
+    padding: 10px;
+}
+.textarea-input{
+    position: relative;
+}
+.textarea-input textarea{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50vh;
+    outline: none;
+    resize: none;
+}

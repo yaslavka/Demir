@@ -1,0 +1,34 @@
+div .header{
+    display: flex;
+}
+.header{
+    background-color: #175481ba;
+    height: 10vh;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__inner{
+    display: flex;
+    margin-inline: 5px;
+}
+.header__button{
+    margin-inline: 5px;
+}
+.logo__image{
+    margin-inline: 5px;
+}
+.clearfix{
+    align-items: center;
+}
+.header__button-text{
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.auth-styles{
+    display: flex;
+    align-items: center;
+    margin-inline: 5px;
+}

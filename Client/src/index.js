@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import isBetween from 'dayjs/plugin/isBetween'
 import timezone from 'dayjs/plugin/timezone'
@@ -14,7 +13,8 @@ import configureStore, { history } from "./config/store";
 import {Provider} from "react-redux";
 import {PersistGate} from 'redux-persist/integration/react';
 import * as serviceWorker from './serviceWorker'
-import "./mobile.css";
+import 'react-datepicker/dist/react-datepicker.css'
+import './index.css'
 
 export const store = configureStore()
 dayjs.extend(isBetween)

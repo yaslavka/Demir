@@ -1,11 +1,12 @@
 const r = Object.freeze({
     root: '/',
-    signIn: '/sign-in',
-    signUp: '/sign-up',
-    //Private routes
+    searchhotelhome: '/search_hotel_home',
     region: '/region/:id',
+    hotelHom: '/hotel_hom/:id',
+    nomerid: '/nomer/:id',
+    //Private routes
+    user: '/home',
     dashboard: '/dashboard',
-    hotel: '/hotel/:id',
     //konstruktor router
     edit: '/edit/template/:id',
     preview:'/preview/template:/id',

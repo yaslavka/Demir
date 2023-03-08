@@ -1,11 +1,11 @@
 import axios from 'axios'
 import Raven from 'raven-js'
-import { getAccessToken, createFormDataObj } from '../utils'
+import { getAccessToken } from '../utils'
 import * as actions from '../actions/auth.actions'
 import { store } from '../index'
 
 export const baseInstance = axios.create({
-    baseURL: 'http://127.0.0.1:80/api',
+    baseURL: process.env.REACT_APP_BASE_URL,
 })
 
 baseInstance.interceptors.request.use(
@@ -47,10 +47,7 @@ export const api = {
         return baseInstance.get('/user')
     },
     signIn(credentials) {
-        return baseInstance.post(
-            '/user/login',
-            createFormDataObj({ ...credentials, grant_type: 'password' }),
-        )
+        return baseInstance.post('/user/login', credentials)
     },
     signUp(userInfo) {
         return baseInstance.post('/user/registration', userInfo)
@@ -59,7 +56,37 @@ export const api = {
         return baseInstance.get('/user/inviter', params)
     },
     search(clientCredentials){
-        console.log(clientCredentials)
         return baseInstance.post('/user/search', clientCredentials)
-    }
+    },
+    searchCity(clientCredentials){
+        return baseInstance.post('/user/search/siti', clientCredentials)
+    },
+    gorod(){
+        return baseInstance.get('/siti')
+    },
+    recomend(){
+        return baseInstance.get('/recomend')
+    },
+    actions(){
+        return baseInstance.get('/actions')
+    },
+    grtSearch(){
+        return baseInstance.post('/user/number/search')
+    },
+    getFilterSearch(data){
+        return baseInstance.post('/user/search/filter', data)
+    },
+    hotelidinfo(id){
+        return baseInstance.get(`/hotel?id=${id}`)
+    },
+    nomeridinfo(id){
+        return baseInstance.get(`/nomer?id=${id}`)
+    },
+    postOtzyv(data){
+        return baseInstance.post('/user/nomera/otzyv', data)
+    },
+    postBronenomer(data){
+        console.log(data)
+        return baseInstance.post('/user/bronenomer', data)
+    },
 }

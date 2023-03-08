@@ -19,7 +19,7 @@ function PrivateRoutes({ history }){
                                 <RouteWithSubRoutes key={route.id} {...omit(route, 'id')} />
                             ))}
 
-                            <Redirect to={r.root} />
+                            <Redirect to={r.user} />
                         </Switch>
                     </main>
                 </Router>

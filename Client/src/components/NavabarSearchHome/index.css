@@ -1,0 +1,219 @@
+#sidebar{
+
+}
+
+@media only screen and (max-width: 1204px){
+    .sidebar-box {
+        margin-top: 10px;
+    }
+}
+.sidebar-box {
+    margin-top: 40px;
+}
+.sidebar-box:first-child {
+    margin-top: 0;
+}
+.radio,
+.checkbox {
+    position: relative;
+    display: block;
+    margin: 3px 0;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 7px;
+}
+.radio label,
+.checkbox label,
+.radio-inline label,
+.checkbox-inline label {
+    min-height: 20px;
+    padding-left: 26px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+.search-form .c-checkbox,
+.search-form .c-checkbox label {
+    margin-bottom: 0;
+}
+.search-main .form-search-label {
+    margin-bottom: 7px;
+}
+.clone-search-form-add-options .form-search-label {
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    vertical-align: top;
+    margin-right: 12px;
+    padding-right: 11px;
+    border-right: 1px solid rgba(204,204,204,.46);
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clone-search-form-add-options .form-search-label-no-border{
+    border-right:none;
+}
+.compact-clone-search-form-add-options .form-search-label{
+    border-right: 0px solid rgba(204,204,204,.46);
+}
+.clone-search-form-add-options .form-search-label:last-child{
+    margin-right: 0;
+    padding-right: 0;
+    border: none;
+}
+.search-main .c-unknown-dates label {
+    display: inline;
+}
+.filter-form label {
+    display: block;
+    font-size: 12px;
+    padding-right: 30px;
+    position: relative;
+}
+.sidebar-search-form label {
+    color: #808080;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.sidebar-search-form-label {
+    color: #bbb;
+    font-size: 8px;
+    left: 15px;
+    line-height: 14px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 3px;
+}
+.sidebar-search-form-in .sidebar-search-form-label {
+    left: 43px;
+}
+.sidebar-search-form-dates .dates-unknown .sidebar-search-form-label {
+    display: none;
+}
+.sidebar-search-form .selectric .label {
+    padding: 7px 10px 7px 15px;
+    font-size: 14px;
+    line-height: 22px;
+}
+.sidebar-search-form .selectric-input-sm .selectric .label {
+    padding: 5px 9px;
+}
+
+.tool-box li.label {
+    margin-right: 20px;
+    padding: 1px 0;
+}
+
+@media only screen and (max-width: 1260px){
+    .tool-box li.label {
+        display: none;
+    }
+}
+.items-container .list .overlay-tour-pane.has-discount-label {
+    bottom: 52px;
+}
+.item-label-triangle { /* удалить потом*/
+    border: 38px solid transparent;
+    border-color: #3695d5 transparent transparent #3695d5;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.item-label-triangle .item-label-circle { /* удалить потом*/
+    background-color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+
+    height: 35px;
+    left: -33px;
+    line-height: 35px;
+    position: absolute;
+    text-align: center;
+    top: -33px;
+    width: 35px;
+}
+.item-label-triangle .leader { /* удалить потом*/
+    color: #ffa314;
+    font-size: 22px;
+}
+.children-extra-label {
+    background: rgba(82, 150, 66, 0.24);
+    border-radius: 2px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #529642;
+    margin-top:10px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 7px;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -24.5px;
+    z-index: 1;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 5px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1px;
+    font: inherit;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    color: inherit;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+.c-checkbox .c-checkbox-element, .c-radio .c-radio-element {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-left: -26px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    top: 4px;
+}
+.set-header{
+    font-weight: 900;
+}
+.label-range {
+    margin-bottom: 2.5rem;
+}
+.label {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+.input-group {
+    margin-bottom: 2rem;
+}
+.label-range {
+    margin-bottom: 2.5rem;
+}

@@ -9,6 +9,14 @@ const cors = require("cors");
 const path = require("path");
 const bodyParser = require('body-parser');
 const multer = require("multer");
+const GorodController = require('./src/Controllers/GorodControllers/index')
+const RecomendController = require('./src/Controllers/RecomendController/index')
+const ActionController = require('./src/Controllers/ActionControllers/index')
+const UserController =require('./src/Controllers/UserController/index')
+const SearchController = require('./src/Controllers/SearchController/index')
+const HotelIdController = require('./src/Controllers/HotelIdController/index')
+const NomerIdController = require('./src/Controllers/NomerIdController/index')
+const BroneController = require('./src/Controllers/BroneController/index')
 // const https = require("https");
 // const privateKey = fs.readFileSync(
 //     "/etc/letsencrypt/live/6551eb3.online-server.cloud/privkey.pem",
@@ -36,6 +44,26 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use("/api/user/avatar", express.static(path.resolve(__dirname, "files", "images")));
 app.use("/api/sites/", express.static(path.resolve(__dirname, "clientsites")));
+//Главная страница
+app.get("/api/siti", GorodController.Gorod)
+app.get("/api/recomend", RecomendController.Recomend)
+app.get("/api/actions", ActionController.Actions)
+//Регистрация
+app.get("/api/inviter", UserController.inviter)
+app.post("/api/user/registration", UserController.register)
+//Авторизация
+app.post("/api/user/login", UserController.login)
+app.get("/api/user", UserController.user)
+//Поиск
+app.post("/api/user/search", SearchController.search)
+app.post("/api/user/search/siti", SearchController.cyti)
+app.post("/api/user/search/filter", SearchController.filtersearch)
+app.get("/api/hotel", HotelIdController.hotelinfoid)
+app.get("/api/nomer", NomerIdController.nomerId)
+app.post("/api/user/bronenomer", BroneController.brones)
+
+
+
 
 const storage = multer.diskStorage({
     destination(req, file, callback) {
