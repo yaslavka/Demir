@@ -1,7 +1,5 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
-import Stack from '@mui/material/Stack';
-import Rating from '@mui/material/Rating';
 import {Avatar, Box, LinearProgress, linearProgressClasses} from "@mui/material";
 import { styled } from '@mui/material/styles';
 

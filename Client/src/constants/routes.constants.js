@@ -7,6 +7,7 @@ const r = Object.freeze({
     //Private routes
     user: '/home',
     dashboard: '/dashboard',
+    hoteladd: '/dashboard/hotel_add',
     //konstruktor router
     edit: '/edit/template/:id',
     preview:'/preview/template:/id',

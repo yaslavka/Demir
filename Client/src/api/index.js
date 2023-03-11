@@ -86,7 +86,12 @@ export const api = {
         return baseInstance.post('/user/nomera/otzyv', data)
     },
     postBronenomer(data){
-        console.log(data)
         return baseInstance.post('/user/bronenomer', data)
+    },
+    myobjekts(){
+        return baseInstance.get('/user/myobjekts')
+    },
+    mapsities(){
+        return baseInstance.get('/user/cyties')
     },
 }

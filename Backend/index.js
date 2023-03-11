@@ -61,7 +61,8 @@ app.post("/api/user/search/filter", SearchController.filtersearch)
 app.get("/api/hotel", HotelIdController.hotelinfoid)
 app.get("/api/nomer", NomerIdController.nomerId)
 app.post("/api/user/bronenomer", BroneController.brones)
-
+app.get("/api/user/myobjekts", UserController.myobjekts)
+app.get("/api/user/cyties", GorodController.cyties)
 
 
 

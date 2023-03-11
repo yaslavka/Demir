@@ -454,6 +454,7 @@ function PrivateSearchHotel(){
     useEffect(()=>{
         Filtetypeho()
     },[typehote])
+    console.log(resSerch)
     return (
         <>
            <div className="search-pages">

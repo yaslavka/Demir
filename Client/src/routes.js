@@ -8,6 +8,7 @@ import PrivateSearchHotel from "./pages/private/Home/HomeComponents/SearchHotel"
 import PrivateHotelId from "./pages/private/Home/HomeComponents/HotelId";
 import PrivateNomerId from "./pages/private/Home/HomeComponents/NomerId";
 import Dashboard from "./pages/private/Dashboard";
+import HoteladdForm from "./pages/private/HoteladdForm";
 
 export const publicRouteConfig =[
     {
@@ -77,6 +78,12 @@ export const privateRouteConfig=[
         id: '11a',
         path: r.dashboard,
         component: Dashboard,
+        exact: true,
+    },
+    {
+        id: '12a',
+        path: r.hoteladd,
+        component: HoteladdForm,
         exact: true,
     },
 ]

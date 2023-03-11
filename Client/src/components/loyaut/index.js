@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 
-function NavbarPrivateUser(){
+function NavbarPrivateUser({myobjekt}){
     const [objekt, setObjekt] =useState(false)
     const [mysites, setMysites] =useState(false)
     const [messa, setMese] =useState(false)
@@ -38,7 +38,7 @@ function NavbarPrivateUser(){
                         </div>
                     </Link>
                     <div style={{color: '#fff', backgroundColor: '#1181C3', borderRadius: 5}}>
-                        <span style={{ padding: 5}}> 24</span>
+                        <span style={{ padding: 5}}>{myobjekt.length}</span>
                     </div>
                     {!objekt ?(
                         <svg onClick={()=>setObjekt(true)}
@@ -59,7 +59,7 @@ function NavbarPrivateUser(){
                 </div>
                 {objekt && (
                     <div className="ollprodvej">
-                        <Link to={'/'}>
+                        <Link to={'/dashboard/hotel_add'}>
                             Добавить объект
                         </Link>
                         <Link to={'/'}>

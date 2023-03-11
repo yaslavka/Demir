@@ -1,6 +1,12 @@
 const jwt = require("jsonwebtoken");
 const ApiError = require("../../../error/ApiError");
 const bcrypt = require("bcrypt");
+const {Otzyv} = require("../../Madals/OtzyvModals");
+const {Brone} = require("../../Madals/BroneModal");
+const {AlbumsNomera} = require("../../Madals/AlbumsNomera");
+const {AlbumHotel} = require("../../Madals/AlbumHotel");
+const {Nomera} = require("../../Madals/Nomeramodals");
+const {Hotel} = require("../../Madals/OtelModals");
 const {User} = require("../../Madals/UserModals");
 const decode='random_key'
 
@@ -103,6 +109,24 @@ class UserController{
         }catch (er){
             return next(ApiError.internal(er));
         }
+    }
+    async myobjekts(req, res, next){
+        const { authorization } = req.headers;
+        if(!authorization){
+            return res.json('Ненайден айди пользователя');
+        }
+        const token = authorization.slice(7);
+        const { username } = jwt.decode(token);
+        let user = await User.findOne({ where: { username } });
+        if (!user) {
+            return next(ApiError.internal("Такой пользователь не найден"));
+        }
+        const myob = await Hotel.findAll({where: {userId:user.id}, include: [{model:Nomera, as:'nomera',  include:[{model: AlbumsNomera, as:'albomsnomera'}]},  {model:Otzyv, as: 'otzyv'},{model: AlbumHotel, as: 'albumhotel'}, {model:User, as:'user'}, {model: Brone, as:'brone', include:[{model: User, as: 'user'}, {model:Nomera, as: 'nomera'}]}]})
+        if (!myob){
+            return res.status(404).json({message: 'у вас нет созданных объектов'})
+        }
+        return res.json(myob)
+
     }
 }
 module.exports = new UserController()

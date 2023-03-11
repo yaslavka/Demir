@@ -1,4 +1,88 @@
 #profile-pages{
+    display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
+}
+.profile-pages-ramka{
+    display: flex;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-pages-ramka img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.profile-pages-info{
+    font-weight: bold;
+    font-size: 20px;
+    margin-inline: 10px;
+}
+.profile-pages-info-name{
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.profile-pages-info-phone{
+    display: flex;
+    font-weight: 300;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin-inline: 7px;
+    margin-bottom: 20px;
+}
+.profile-pages-info-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.profile-pages-info-button button{
+    background-color: #FFFFFF;
+    color: #0E0E0E;
+    border-color: #E8EFF5;
+    width: 200px;
+    border-radius: 10px;
+}
+.profile-pages-info-edit{
+    display: flex;
+    align-items: center;
+}
+.profile-pages-info-edit-text{
+    margin-inline: 10px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.select-objekt{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+.select-objekt-text{
+    font-weight: bold;
+    font-size: 40px;
+}
+.select-objekt-ramka select{
+    margin-inline: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+}
+.select-objekt-procent{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.select-objekt-procent-text{
+    font-size: 20px;
+    font-weight: 400;
 }

@@ -35,7 +35,7 @@ class SearchController{
             return res.status(403).json({message: 'Повашему запросу ничего не найденно'})
         }
         //let hotel = await Hotel.findAll({include: 'nomera', where: {gorodaId:siti?.id, activ:{[Op.not]: false}, kolicestvoNomerov: {[Op.gt]: 2} }})
-        const hotel =await  Hotel.findAll({where: {gorodaId:siti?.id, activ:{[Op.not]: false}, kolicestvoNomerov: {[Op.gt]: 2} }, include:[{model:Otzyv, as:'otzyv'},{model:Nomera, as: 'nomera', include:{model:AlbumsNomera, as:'albomsnomera'}}, {model: AlbumHotel, as:'albumhotel'}], })
+        const hotel = await Hotel.findAll({where: {gorodaId:siti?.id, activ:{[Op.not]: false}, kolicestvoNomerov: {[Op.gt]: 0} }, include:[{model:Otzyv, as:'otzyv'},{model:Nomera, as: 'nomera', include:{model:AlbumsNomera, as:'albomsnomera'}}, {model: AlbumHotel, as:'albumhotel'}], })
         if (!hotel){
             return res.status(403).json({message: 'Повашему запросу ничего не найденно'})
         }

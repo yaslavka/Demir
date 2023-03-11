@@ -125,6 +125,7 @@ div .pages-recomendet{
     border-radius: 10px;
     border-color: #d6dfe8;
     border-style: solid;
+    width: 315px;
 }
 .pages-recomendet-content-images img{
     width: 310px;
@@ -355,7 +356,7 @@ div .footter-content{
     display: flex;
     padding: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .col-otzyv-first_name{
     font-size: 20px;

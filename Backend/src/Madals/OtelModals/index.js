@@ -1,5 +1,6 @@
 const {DataTypes} = require("sequelize");
 const sequelize = require("../../../db");
+const {User} = require("../UserModals");
 const {Goroda} = require("../GorodaModals");
 
 const Hotel = sequelize.define('hotel', {
@@ -27,8 +28,11 @@ const Hotel = sequelize.define('hotel', {
     activ:{type: DataTypes.BOOLEAN, defaultValue: false},
     pay:{type: DataTypes.BOOLEAN, defaultValue: false},
     gorodaId: {type: DataTypes.BIGINT, defaultValue: null},
+    userId: {type: DataTypes.BIGINT, defaultValue: null},
 })
 Goroda.hasMany(Hotel, {as: "hotel"});
 Hotel.belongsTo(Goroda, {as: 'goroda'});
+User.hasMany(Hotel, {as: "hotel"});
+Hotel.belongsTo(User, {as: 'user'});
 
 module.exports= {Hotel}

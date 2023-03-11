@@ -7,5 +7,10 @@ class GorodController {
 
         return res.json(siti.rows)
     }
+    async cyties (req, res) {
+        const siti = await Goroda.findAll()
+
+        return res.json(siti)
+    }
 }
 module.exports = new GorodController()

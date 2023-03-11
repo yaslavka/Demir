@@ -4,6 +4,12 @@
     padding: 30px;
 
 }
+@media (min-width: 1200px){
+    .dashboard-nav {
+        flex: 0 0 auto;
+        width: 22%;
+    }
+}
 .dashboard-links{
     display: flex;
     align-items: center;
@@ -54,4 +60,116 @@
 }
 .ollprodvej a:hover{
     color: #ffdd00;
+}
+.col-info-userhotel{
+    padding: 10px;
+    height: auto;
+    box-shadow: 0 3px 3px 0 #0d6efd4a;
+    color: #666;
+    font-size: 12px;
+    position: relative;
+    transition: box-shadow .25s ease-out;
+}
+.zagolovok-info{
+    font-weight: bold;
+    color: #000000;
+    font-size: 20px;
+}
+.spisok-info{
+    color: #0d6efd;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.title-uslegi{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000000;
+}
+.doughnutChart {
+    width: 18vmax;
+    margin: auto;
+}
+.lineChart {
+    width: 80%;
+    margin: auto;
+}
+.my-sites-none{
+    padding: 15px;
+    box-shadow: 0 3px 3px 0 #0d6efd4a;
+    color: #666;
+    font-size: 12px;
+    position: relative;
+    transition: box-shadow .25s ease-out;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #0d6efd4a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.dashboard-my-brone{
+    padding: 30px;
+}
+.dashboard-my-brone-row{
+    position: relative;
+    transition: box-shadow .25s ease-out;
+    box-shadow: 0 3px 3px 0 #DBDBDB;
+    margin-bottom: -40px;
+}
+.dashboard-my-brones{
+    margin-bottom: 20px;
+
+}
+.col-info-user-brone{
+    background-color: #1380C3;
+    padding: 30px;
+}
+.dashboard-my-brone-nemeHotel{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.dashboard-my-brone-statusy{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.dashboard-my-brone-statusy-text{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-inline: 10px;
+}
+.dashboard-my-brone-statusy-text22{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-inline: 10px;
+}
+.dashboard-my-brone-button{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dashboard-my-brone-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.dashboard-my-brone-button button{
+    background-color: #FFFFFF;
+    color: #0E0E0E;
+    border-color: #E8EFF5;
+    width: 200px;
+    border-radius: 10px;
 }
