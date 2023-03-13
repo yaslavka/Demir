@@ -1,0 +1,31 @@
+.page {
+  box-sizing: border-box;
+  background-color: #edf4f6;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #a1a1a1;
+
+}
+
+.tempWrap {
+  transition: all .25s ease;
+  width: 280px;
+}
+
+.tempWrap:hover {
+  box-shadow: 0 10px 20px 10px #DFEBEE;
+  transform: translateY(-2rem);
+}
+.sites-mages-linnk img{
+  display: flex;
+  align-items: center;
+  width: 255px;
+  height: 200px;
+}
+.sites-mages-linnk{
+  width: 250px;
+}

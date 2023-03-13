@@ -1,0 +1,38 @@
+.HeaderEdit_maxHeadH__1grOm {
+    max-height: 6rem;
+}
+.HeaderEdit_max-w-7xl__3PVpz {
+    max-width: 136rem;
+}
+.px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.bg-BL-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(60, 172, 254, var(--tw-bg-opacity));
+}
+.pagebar{
+    position: absolute;
+    top:100%;
+    background-color: white;
+    transition: 0.3s all ease;
+    width: 20rem;
+    min-height: 90vh;
+}
+
+.w-96 {
+    width: 24rem;
+}
+.mt-12 {
+    margin-top: 3rem;
+}
+.pa{
+    padding: 10px;
+}
+.sideButton:hover{
+    border: 2px solid white
+}

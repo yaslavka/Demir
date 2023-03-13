@@ -28,6 +28,14 @@ class UserController{
         };
         return res.json(result);
     }
+    async allUsers(req, res, next) {
+        const user = await User.findAll();
+        if (!user) {
+            return next(ApiError.internal("Пустой результат"));
+        }
+
+        return res.json(user);
+    }
     async register(req, res, next){
         const {email, first_name, last_name, password, phone, referral, username} = req.body;
         if (!email || !first_name || !last_name || !password || !phone || !username){

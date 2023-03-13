@@ -780,3 +780,11 @@ div .albumhotel-hotel{
 .opisanie-otelya-text sup{
 
 }
+.items-container .item-name {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}

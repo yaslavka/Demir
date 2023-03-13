@@ -91,7 +91,31 @@ export const api = {
     myobjekts(){
         return baseInstance.get('/user/myobjekts')
     },
+    myBroneObjekts(){
+        return baseInstance.get('/user/mybroneobjekts')
+    },
+    myBroneOtzyvy(){
+        return baseInstance.get('/user/mybroneotzyvy')
+    },
+    getAllUsers(){
+        return baseInstance.get('/user/all_users')
+    },
     mapsities(){
         return baseInstance.get('/user/cyties')
     },
+    addHotel(credentials) {
+        return baseInstance.post('/user/hotel_add', credentials)
+    },
+    deleteHotel(id) {
+        return baseInstance.delete(`/user/hotel_delete=${id}`)
+    },
+    rowHotel(data) {
+        return baseInstance.post(`/user/hotel_update`, data)
+    },
+    userNomerarow(){
+        return baseInstance.get('/user/nomerarow')
+    },
+    searchMessages(search){
+        return baseInstance.get(`/user/search?username=${search}`)
+    }
 }

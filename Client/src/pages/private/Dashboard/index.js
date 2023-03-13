@@ -14,6 +14,11 @@ import SelectObjekt from "./Objektuser/SelectObjekt";
 import { Doughnut } from "react-chartjs-2";
 import moment from 'moment';
 import 'moment/locale/ru';
+import Podnytie from "../../../components/loyaut/ModalPodnytie";
+import Vydelenie from "../../../components/loyaut/ModalVydelenie";
+import Premium from "../../../components/loyaut/ModalPremium";
+import VipBlock from "../../../components/loyaut/ModalVipBlock";
+import Paket from "../../../components/loyaut/ModalPaket";
 
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -38,6 +43,12 @@ function Dashboard(){
     const [maps, setMaps]=useState(1)
     const [bron, setBron] = useState(5)
     const [otzyvs, setOtzyvs] = useState(3)
+    const [myBroneobjekt, setMyBroneobjekt] = useState([])
+    const [pdnyatie, setPdnyatie] = useState(false)
+    const [vydeleni, setVydelenie] = useState(false)
+    const [premiu, setPremium] = useState(false)
+    const [vipBlock, setVipBlock] = useState(false)
+    const [paket, setPaket] = useState(false)
     let podnyatiered = 96.7;
     let podnyatiegrey = 3.3;
     const podnyatie = {
@@ -100,16 +111,26 @@ function Dashboard(){
     const loadmorotzyv = () =>{
         setOtzyvs(otzyvs + value.otzyv.length)
     }
+    useEffect(()=>{
+        api
+            .myBroneObjekts()
+            .then(response => {
+                setMyBroneobjekt(response)
+            })
+            .catch(err =>{
+                toast.error(err.message)
+            })
+    },[])
     return (
         <>
             <NavbarHomPrivate/>
             {userInfo && (
                 <>
-                    {myobjekt && (
+                    {myobjekt && myBroneobjekt && (
                         <>
                             <Row>
                                 <Col xl={3} className="dashboard-nav">
-                                    <NavbarPrivateUser myobjekt={myobjekt}/>
+                                    <NavbarPrivateUser myobjekt={myobjekt} myBroneobjekt={myBroneobjekt}/>
                                 </Col>
                                 <Col xl={9}>
                                     <Profile/>
@@ -157,52 +178,52 @@ function Dashboard(){
                                     <div style={{display:"flex", alignItems: "center"}}>
                                         <div className="doughnutChart">
                                             <Doughnut data={podnyatie} />
-                                            <div style={{position: "absolute", top: 1060, left: 380, textAlign: "center"}}>
+                                            <div style={{position: "absolute", top: 1100, left: 380, textAlign: "center"}}>
                                                 <div style={{fontWeight: "bold", fontSize: 17}}>ПОДНЯТИЕ</div>
                                                 <div>Осталось</div>
                                                 <div style={{fontWeight: "bold", fontSize: 20}}>5 ДНЕЙ</div>
                                             </div>
                                             <div style={{display: "flex", alignItems: "center", justifyContent: "center", paddingTop: 30}}>
-                                                <Button style={{width: 150, backgroundColor: '#1181C3'}}>
+                                                <Button style={{width: 150, backgroundColor: '#1181C3'}} onClick={()=>setPdnyatie(true)}>
                                                     Продлить
                                                 </Button>
                                             </div>
                                         </div>
                                         <div className="doughnutChart">
                                             <Doughnut data={vydelenie}/>
-                                            <div style={{position: "absolute", top: 1060, left: 625, textAlign: "center"}}>
+                                            <div style={{position: "absolute", top: 1100, left: 625, textAlign: "center"}}>
                                                 <div style={{fontWeight: "bold", fontSize: 17}}>ВЫДЕЛЕНИЕ</div>
                                                 <div>Осталось</div>
                                                 <div style={{fontWeight: "bold", fontSize: 20}}>5 ДНЕЙ</div>
                                             </div>
                                             <div style={{display: "flex", alignItems: "center", justifyContent: "center", paddingTop: 30}}>
-                                                <Button style={{width: 150, backgroundColor: '#1181C3'}}>
+                                                <Button style={{width: 150, backgroundColor: '#1181C3'}} onClick={()=>setVydelenie(true)}>
                                                     Продлить
                                                 </Button>
                                             </div>
                                         </div>
                                         <div className="doughnutChart">
                                             <Doughnut data={premium}/>
-                                            <div style={{position: "absolute", top: 1060, left: 885, textAlign: "center"}}>
+                                            <div style={{position: "absolute", top: 1100, left: 885, textAlign: "center"}}>
                                                 <div style={{fontWeight: "bold", fontSize: 17}}>ПРЕМИУМ</div>
                                                 <div>Осталось</div>
                                                 <div style={{fontWeight: "bold", fontSize: 20}}>5 ДНЕЙ</div>
                                             </div>
                                             <div style={{display: "flex", alignItems: "center", justifyContent: "center", paddingTop: 30}}>
-                                                <Button style={{width: 150, backgroundColor: '#1181C3'}}>
+                                                <Button style={{width: 150, backgroundColor: '#1181C3'}} onClick={()=>setPremium(true)}>
                                                     Продлить
                                                 </Button>
                                             </div>
                                         </div>
                                         <div className="doughnutChart">
                                             <Doughnut data={doughnutState}/>
-                                            <div style={{position: "absolute", top: 1060, left: 1143, textAlign: "center"}}>
+                                            <div style={{position: "absolute", top: 1100, left: 1143, textAlign: "center"}}>
                                                 <div style={{fontWeight: "bold", fontSize: 17}}>VIP БЛОК</div>
                                                 <div>Осталось</div>
                                                 <div style={{fontWeight: "bold", fontSize: 20}}>5 ДНЕЙ</div>
                                             </div>
                                             <div style={{display: "flex", alignItems: "center", justifyContent: "center", paddingTop: 30}}>
-                                                <Button style={{width: 150, backgroundColor: '#1181C3'}}>
+                                                <Button style={{width: 150, backgroundColor: '#1181C3'}} onClick={()=>setVipBlock(true)}>
                                                     Продлить
                                                 </Button>
                                             </div>
@@ -217,7 +238,7 @@ function Dashboard(){
                                             <div>
                                                 У вас не активирован сайт
                                             </div>
-                                            <Button style={{width: 150, backgroundColor: '#1181C3'}}>
+                                            <Button style={{width: 150, backgroundColor: '#1181C3'}} role={"link"} href={"/edit/new-template"}>
                                                 Добавить
                                             </Button>
                                         </div>
@@ -495,6 +516,21 @@ function Dashboard(){
                                     )}
                                 </Col>
                             </Row>
+                            {pdnyatie && (
+                                <Podnytie pdnyatie={pdnyatie} setPdnyatie={setPdnyatie}/>
+                            )}
+                            {vydeleni && (
+                                <Vydelenie pdnyatie={vydeleni} setPdnyatie={setVydelenie}/>
+                            )}
+                            {premiu && (
+                                <Premium pdnyatie={premiu} setPdnyatie={setPremium}/>
+                            )}
+                            {vipBlock && (
+                                <VipBlock pdnyatie={vipBlock} setPdnyatie={setVipBlock}/>
+                            )}
+                            {paket && (
+                                <Paket pdnyatie={paket} setPdnyatie={setPaket}/>
+                            )}
                         </>
                     )}
                 </>

@@ -50,6 +50,7 @@ app.get("/api/recomend", RecomendController.Recomend)
 app.get("/api/actions", ActionController.Actions)
 //Регистрация
 app.get("/api/inviter", UserController.inviter)
+app.get("/api/user/all_users", UserController.allUsers)
 app.post("/api/user/registration", UserController.register)
 //Авторизация
 app.post("/api/user/login", UserController.login)
@@ -60,7 +61,10 @@ app.post("/api/user/search/siti", SearchController.cyti)
 app.post("/api/user/search/filter", SearchController.filtersearch)
 app.get("/api/hotel", HotelIdController.hotelinfoid)
 app.get("/api/nomer", NomerIdController.nomerId)
+app.get("/api/user/nomerarow", NomerIdController.allNomera)
 app.post("/api/user/bronenomer", BroneController.brones)
+app.get("/api/user/mybroneobjekts", BroneController.allMybrone)
+app.get("/api/user/mybroneotzyvy", BroneController.allMyOtzyv)
 app.get("/api/user/myobjekts", UserController.myobjekts)
 app.get("/api/user/cyties", GorodController.cyties)
 

@@ -35,13 +35,15 @@
     fill: #ffdd00;
 }
 .dashboard-link-text{
-    font-weight: 500;
-    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
     color: #FFFFFF;
 }
 .dashboard-link-text:hover{
-    font-weight: 500;
-    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
     color: #ffdd00;
 }
 .ollprodvej{
@@ -57,6 +59,17 @@
     font-weight: 500;
     color: #FFFFFF;
     text-decoration: none;
+}
+.dddas{
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.dddas:hover{
+    color: #ffdd00;
 }
 .ollprodvej a:hover{
     color: #ffdd00;
@@ -172,4 +185,7 @@
     border-color: #E8EFF5;
     width: 200px;
     border-radius: 10px;
+}
+.row-d{
+    --bs-gutter-x:0;
 }

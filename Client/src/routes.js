@@ -9,6 +9,14 @@ import PrivateHotelId from "./pages/private/Home/HomeComponents/HotelId";
 import PrivateNomerId from "./pages/private/Home/HomeComponents/NomerId";
 import Dashboard from "./pages/private/Dashboard";
 import HoteladdForm from "./pages/private/HoteladdForm";
+import NomeraAddForm from "./pages/private/NomerAddForm";
+import HotelEdit from "./pages/private/Hoteledit";
+import NomeraEdit from "./pages/private/NomerEdit";
+import MySites from "./pages/private/MySites/MySites";
+import MySitesEdit from "./pages/private/MySites/MySitesEdit";
+import MyBrone from "./pages/private/MyBrones";
+import OllOtzyv from "./pages/private/Otzyvy";
+import UserForAdmin from "./pages/private/UserForAdmin";
 
 export const publicRouteConfig =[
     {
@@ -84,6 +92,66 @@ export const privateRouteConfig=[
         id: '12a',
         path: r.hoteladd,
         component: HoteladdForm,
+        exact: true,
+    },
+    {
+        id: '13a',
+        path: r.nomeraadd,
+        component: NomeraAddForm,
+        exact: true,
+    },
+    {
+        id: '14a',
+        path: r.hoteledit,
+        component: HotelEdit,
+        exact: true,
+    },
+    {
+        id: '15a',
+        path: r.nomeraedit,
+        component: NomeraEdit,
+        exact: true,
+    },
+    {
+        id: '16a',
+        path: r.mysites,
+        component: MySites,
+        exact: true,
+    },
+    {
+        id: '17a',
+        path: r.edit,
+        component: MySitesEdit,
+        exact: true,
+    },
+    {
+        id: '18a',
+        path: r.newtemplate,
+        component: MySitesEdit,
+        exact: true,
+    },
+    {
+        id: '19a',
+        path: r.mybrone,
+        component: MyBrone,
+        exact: true,
+    },
+    {
+        id: '20a',
+        path: r.otzyvy,
+        component: OllOtzyv,
+        exact: true,
+    },
+    {
+        id: '20a',
+        path: r.otzyvy,
+        component: OllOtzyv,
+        exact: true,
+    },
+    {
+        id: '20a',
+        path: r.allUser,
+        component: UserForAdmin,
         exact: true,
     },
 ]
